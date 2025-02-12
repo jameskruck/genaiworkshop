@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Introduction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="header-nav shadow-sm no-print">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <h1 class="text-xl font-bold">Activity Introduction</h1>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Content Wrapper -->
+    <div class="flex flex-grow min-h-0">
+        <!-- Main Content -->
+        <div class="flex flex-col flex-grow">
+            <main class="main-content flex-grow">
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h1 class="text-2xl font-bold mb-4">Welcome to the Activity</h1>
+
+                    
+
+                    
+
+                    
+                <div class="bg-gray-50 p-4 rounded mb-4">
+    <h2 class="text-xl font-semibold mb-3">Step 1: Choose Your Story Theme</h2>
+    <p class="mb-3">Select a theme for your story. The theme can be anything from a creative tale to a real-world decision-making scenario. Here are some examples:</p>
+    <ul class="list-disc pl-6 space-y-2">
+        <li>A time-travel adventure through scientific history</li>
+        <li>An explorer navigating an uncharted planet</li>
+        <li>A detective solving a mystery in a futuristic city</li>
+    </ul>
+    <p class="mb-3">Once you've selected a theme, use the fields below to set up your story.</p>
+    <div class="space-y-4">
+        <div>
+            <label class="block font-medium mb-2">Theme</label>
+            <input type="text" id="theme" class="w-full border rounded p-2" placeholder="E.g., Space Adventure, Historical Mystery" oninput="saveInput('theme')">
+        </div>
+        <div>
+            <label class="block font-medium mb-2">Main Character</label>
+            <input type="text" id="main-character" class="w-full border rounded p-2" placeholder="Describe your main character" oninput="saveInput('main-character')">
+        </div>
+        <div>
+            <label class="block font-medium mb-2">Setting</label>
+            <textarea id="setting" class="w-full border rounded p-2 min-h-[100px]" placeholder="Describe the setting of your story" oninput="saveInput('setting')"></textarea>
+        </div>
+    </div>
+     <a href="activity1-refine.html" class="mt-6 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 inline-block">Next Step: Refine Your Story</a>
+</div>
+
+</div>
+
+
+<script>
+    function saveInput(id) {
+        const value = document.getElementById(id).value;
+        localStorage.setItem(id, value);
+    }
+    
+    function loadInputs() {
+        const fields = ['theme', 'main-character', 'setting'];
+        fields.forEach(id => {
+            const savedValue = localStorage.getItem(id);
+            if (savedValue) {
+                document.getElementById(id).value = savedValue;
+            }
+        });
+    }
+    
+    window.onload = loadInputs;
+</script>
+<button onclick="clearAllInputs()" class="mt-6 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Clear All</button>
+<script>
+    function clearAllInputs() {
+        const fields = ['theme', 'main-character', 'setting'];
+        fields.forEach(id => {
+            document.getElementById(id).value = '';
+            localStorage.removeItem(id);
+        });
+        alert('All inputs have been cleared!');
+    }
+</script>
+</body>
+</html>

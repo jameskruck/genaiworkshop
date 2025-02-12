@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 1: Refine Your Story</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="header-nav shadow-sm no-print">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <h1 class="text-xl font-bold">Refine Your Story</h1>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Content Wrapper -->
+    <div class="flex flex-grow min-h-0">
+        <!-- Main Content -->
+        <div class="flex flex-col flex-grow">
+            <main class="main-content flex-grow">
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h1 class="text-2xl font-bold mb-4">Step 2: Refine Your Story with AI</h1>
+
+                    <!-- Display Saved Inputs -->
+                    <div class="bg-gray-50 p-4 rounded mb-4">
+                        <h2 class="text-xl font-semibold mb-3">Your Story Setup</h2>
+                        <p><strong>Theme:</strong> <span id="display-theme">Loading...</span></p>
+                        <p><strong>Main Character:</strong> <span id="display-main-character">Loading...</span></p>
+                        <p><strong>Setting:</strong> <span id="display-setting">Loading...</span></p>
+                    </div>
+
+                    <!-- AI Chat Interface -->
+                    <div class="bg-gray-50 p-4 rounded mb-4">
+                        <h2 class="text-xl font-semibold mb-3">Refine Your Story with AI</h2>
+                        <p class="mb-3">Ask AI for suggestions to improve your story setup. Enter your prompt below and see what AI suggests!</p>
+                        <textarea id="ai-prompt" class="w-full border rounded p-2 min-h-[100px]" placeholder="E.g., 'Refine my main character description.'"></textarea>
+                        <button id="submit-prompt" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Get AI Suggestion</button>
+                        <div id="ai-response" class="mt-4 p-4 bg-white border rounded shadow-sm hidden">
+                            <h3 class="text-lg font-semibold mb-2">AI Suggestion:</h3>
+                            <p id="response-content">Your AI suggestion will appear here.</p>
+                        </div>
+                    </div>
+
+                    <a href="activity1-choices.html" class="mt-6 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 inline-block">Next Step: Create Choices</a>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Load saved inputs from localStorage
+        function loadInputs() {
+            const fields = ['theme', 'main-character', 'setting'];
+            fields.forEach(id => {
+                const savedValue = localStorage.getItem(id);
+                if (savedValue) {
+                    document.getElementById(`display-${id}`).textContent = savedValue;
+                }
+            });
+        }
+
+        window.onload = loadInputs;
+
+        // Simulate AI response
+        document.getElementById('submit-prompt').addEventListener('click', () => {
+            const prompt = document.getElementById('ai-prompt').value;
+            if (prompt) {
+                document.getElementById('response-content').textContent = `AI suggests: "${prompt}" could be refined to include more specific details about your character's background and motivations.`;
+                document.getElementById('ai-response').classList.remove('hidden');
+            } else {
+                alert('Please enter a prompt for the AI.');
+            }
+        });
+    </script>
+</body>
+</html>

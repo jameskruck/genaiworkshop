@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 1: Create Choices</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="header-nav shadow-sm no-print">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <h1 class="text-xl font-bold">Create Branching Paths</h1>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Content Wrapper -->
+    <div class="flex flex-grow min-h-0">
+        <!-- Main Content -->
+        <div class="flex flex-col flex-grow">
+            <main class="main-content flex-grow">
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h1 class="text-2xl font-bold mb-4">Step 3: Create Choices for Your Story</h1>
+
+                    <div class="bg-gray-50 p-4 rounded mb-4">
+                        <h2 class="text-xl font-semibold mb-3">Define Your Branching Paths</h2>
+                        <p class="mb-3">Describe two choices and their respective outcomes for your story. These choices will help shape the branching paths.</p>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block font-medium mb-2">Choice 1</label>
+                                <input type="text" id="choice1" class="w-full border rounded p-2" placeholder="Describe the first choice" oninput="saveInput('choice1')">
+                            </div>
+                            <div>
+                                <label class="block font-medium mb-2">Outcome 1</label>
+                                <textarea id="outcome1" class="w-full border rounded p-2 min-h-[100px]" placeholder="Describe the outcome for the first choice" oninput="saveInput('outcome1')"></textarea>
+                            </div>
+                            <div>
+                                <label class="block font-medium mb-2">Choice 2</label>
+                                <input type="text" id="choice2" class="w-full border rounded p-2" placeholder="Describe the second choice" oninput="saveInput('choice2')">
+                            </div>
+                            <div>
+                                <label class="block font-medium mb-2">Outcome 2</label>
+                                <textarea id="outcome2" class="w-full border rounded p-2 min-h-[100px]" placeholder="Describe the outcome for the second choice" oninput="saveInput('outcome2')"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="activity1-reflection.html" class="mt-6 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 inline-block">Next Step: Reflect on Your Story</a>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Save inputs to localStorage
+        function saveInput(id) {
+            const value = document.getElementById(id).value;
+            localStorage.setItem(id, value);
+        }
+
+        // Load saved inputs from localStorage
+        function loadInputs() {
+            const fields = ['choice1', 'outcome1', 'choice2', 'outcome2'];
+            fields.forEach(id => {
+                const savedValue = localStorage.getItem(id);
+                if (savedValue) {
+                    document.getElementById(id).value = savedValue;
+                }
+            });
+        }
+
+        window.onload = loadInputs;
+    </script>
+</body>
+</html>

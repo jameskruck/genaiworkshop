@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Introduction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="header-nav shadow-sm no-print">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <h1 class="text-xl font-bold">Activity Introduction</h1>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Content Wrapper -->
+    <div class="flex flex-grow min-h-0">
+        <!-- Main Content -->
+        <div class="flex flex-col flex-grow">
+            <main class="main-content flex-grow">
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h1 class="text-2xl font-bold mb-4">Welcome to the Activity</h1>
+
+                    <div class="bg-gray-50 p-4 rounded mb-4">
+                        <h2 class="text-xl font-semibold mb-3">Overview</h2>
+                        <p class="mb-3">In this activity, you will explore how AI can support collaborative problem-solving and creative thinking. The activity consists of two parts:</p>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li><strong>Part 1:</strong> Create a Choose Your Own Adventure (CYOA) story, using AI to refine your ideas and explore new possibilities.</li>
+                            <li><strong>Part 2:</strong> Simulate a student experience by completing a real-world assignment with AI assistance and reflecting on how AI can influence assessment design.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded mb-4">
+                        <h2 class="text-xl font-semibold mb-3">Objectives</h2>
+<ul class="list-disc pl-6 space-y-2">
+    <li>Explore how AI can act as a creative partner by refining ideas and generating new possibilities.</li>
+    <li>Engage in hands-on activities to simulate student use of AI for completing assignments.</li>
+    <li>Analyze how AI-generated responses can influence assessment design and inform authentic assessment practices.</li>
+</ul>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded mb-4">
+                        <h2 class="text-xl font-semibold mb-3">Getting Started</h2>
+                        <p class="mb-3">Click the button below to begin the activity. You will start by creating a Choose Your Own Adventure story.</p>
+                        <a href="activity1.html" class="mt-6 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 inline-block">Start Activity</a>
+                    </div>
+                <div class="bg-gray-50 p-4 rounded mb-4">
+    <h2 class="text-xl font-semibold mb-3">Reflection and Next Steps</h2>
+    <p class="mb-3">Before moving on to the next activity, take some time to reflect on your experience with creating a Choose Your Own Adventure story.</p>
+    <ul class="list-disc pl-6 space-y-2">
+        <li>How did AI enhance or limit your creative process?</li>
+        <li>What surprising outcomes did you discover?</li>
+        <li>How might this exercise apply to your teaching or learning strategies?</li>
+    </ul>
+    <p class="mb-3">Use the text area below to capture your thoughts:</p>
+    <textarea id="reflection" class="w-full border rounded p-2 min-h-[150px]" placeholder="Write your reflection here..."></textarea>
+</div>
+
+<div class="bg-gray-50 p-4 rounded mb-4">
+    <h2 class="text-xl font-semibold mb-3">Next Steps</h2>
+    <p class="mb-3">When you're ready, proceed to the next activity where you will simulate a student experience and explore how AI-generated responses can influence assessment design.</p>
+    <a href="activity2.html" class="mt-6 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 inline-block">Proceed to Activity 2</a>
+</div>
+<div class="bg-gray-50 p-4 rounded mb-4">
+    <h2 class="text-xl font-semibold mb-3">Step 2: Create Branching Paths</h2>
+    <p class="mb-3">Define possible choices and outcomes for your story. Use the fields below to create a branching path with two options.</p>
+    <div class="space-y-4">
+        <div>
+            <label class="block font-medium mb-2">Choice 1</label>
+            <input type="text" id="choice1" class="w-full border rounded p-2" placeholder="Describe the first choice">
+        </div>
+        <div>
+            <label class="block font-medium mb-2">Outcome 1</label>
+            <textarea id="outcome1" class="w-full border rounded p-2 min-h-[100px]" placeholder="Describe the outcome for the first choice"></textarea>
+        </div>
+        <div>
+            <label class="block font-medium mb-2">Choice 2</label>
+            <input type="text" id="choice2" class="w-full border rounded p-2" placeholder="Describe the second choice">
+        </div>
+        <div>
+            <label class="block font-medium mb-2">Outcome 2</label>
+            <textarea id="outcome2" class="w-full border rounded p-2 min-h-[100px]" placeholder="Describe the outcome for the second choice"></textarea>
+        </div>
+    </div>
+    <button onclick="nextSection(2)" class="mt-6 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+        Next Step
+    </button>
+</div>
+
+<div class="bg-gray-50 p-4 rounded mb-4">
+    <h2 class="text-xl font-semibold mb-3">Reflection</h2>
+    <p class="mb-3">Reflect on your experience creating a Choose Your Own Adventure story. Use the prompts below to guide your reflection:</p>
+    <ul class="list-disc pl-6 space-y-2">
+        <li>How did AI enhance or limit your creative process?</li>
+        <li>What surprising outcomes did you discover?</li>
+        <li>How might this activity apply to your teaching or learning strategies?</li>
+    </ul>
+    <textarea id="reflection" class="w-full border rounded p-2 min-h-[150px]" placeholder="Write your reflection here..."></textarea>
+</div>
+
+<div class="bg-gray-50 p-4 rounded mb-4">
+    <h2 class="text-xl font-semibold mb-3">Next Steps</h2>
+    <p class="mb-3">When you're ready, proceed to the next activity where you will simulate a student experience and explore how AI-generated responses can influence assessment design.</p>
+    <a href="activity2.html" class="mt-6 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 inline-block">Proceed to Activity 2</a>
+</div>
+</div>
+</main>
+        </div>
+    </div>
+</body>
+</html>
