@@ -1,0 +1,306 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 1: Reflection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="header-nav shadow-sm no-print">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <h1 class="text-xl font-bold">GenAI Workshop</h1>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+      <!-- Content Wrapper -->
+    <div class="flex flex-grow min-h-0">
+        <!-- Main Content -->
+        <div class="flex flex-col flex-grow">
+            <main class="main-content flex-grow">
+ <!-- Progress Bar -->
+<div class="bg-white rounded-lg shadow-sm p-6 mb-4" role="navigation" aria-label="Progress">
+    <div class="flex items-center justify-between max-w-5xl mx-auto">
+        <div class="w-20" data-step="1">
+            <a href="activity1.html" class="flex flex-col items-center w-20 group hover:opacity-75">
+                <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold mb-2">1</div>
+                <span class="text-blue-600 font-semibold text-center text-sm">Setup</span>
+            </a>
+        </div>
+        <div class="h-1 w-16 bg-blue-600" data-line="1"></div>
+        <div class="w-20" data-step="2">
+            <a href="activity1-refine.html" class="flex flex-col items-center w-20 group hover:opacity-75">
+                <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold mb-2">2</div>
+                <span class="text-blue-600 font-semibold text-center text-sm">Refinement</span>
+            </a>
+        </div>
+        <div class="h-1 w-16 bg-blue-600" data-line="2"></div>
+        <div class="w-20" data-step="3">
+            <a href="activity1-choices.html" class="flex flex-col items-center w-20 group hover:opacity-75">
+                <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold mb-2">3</div>
+                <span class="text-blue-600 font-semibold text-center text-sm">Choices</span>
+            </a>
+        </div>
+        <div class="h-1 w-16 bg-blue-600" data-line="3"></div>
+        <div class="w-20" data-step="4">
+            <a href="activity1-choices-nested.html" class="flex flex-col items-center w-20 group hover:opacity-75">
+                <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold mb-2">4</div>
+                <span class="text-blue-600 font-semibold text-center text-sm">Branching</span>
+            </a>
+        </div>
+        <div class="h-1 w-16 bg-blue-600" data-line="4"></div>
+        <div class="w-20" data-step="5">
+    <div class="flex flex-col items-center w-20 relative" aria-current="step">
+        <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold mb-2 ring-2 ring-blue-600 ring-offset-2">5</div>
+        <span class="text-blue-600 font-semibold text-center text-sm">Refinement</span>
+        <span class="sr-only">(Current Step)</span>
+    </div>
+    </div>
+        <div class="h-1 w-16 bg-gray-300" data-line="5"></div>
+        <div class="w-20" data-step="6">
+            <div class="flex flex-col items-center w-20">
+                <div class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center text-white font-semibold mb-2">6</div>
+                <span class="text-gray-500 text-center text-sm">Reflection</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-white rounded-lg shadow-sm p-6">
+    <h1 class="text-2xl font-bold mb-4">Step 5: Refine Your Story Choices</h1>
+
+    <!-- Display All Original Choices -->
+    <div class="bg-gray-50 p-4 rounded mb-6">
+        <h2 class="text-xl font-semibold mb-3">Your Original Choices</h2>
+        
+        <!-- Initial Choice Section -->
+        <div class="mb-4">
+            <h3 class="font-semibold text-lg mb-2">Initial Choice</h3>
+            <p><strong>Choice:</strong> <span id="display-choice1">Loading...</span></p>
+            <p><strong>Outcome A:</strong> <span id="display-outcomeA">Loading...</span></p>
+            <p><strong>Outcome B:</strong> <span id="display-outcomeB">Loading...</span></p>
+        </div>
+
+        <!-- Branching Choices Section -->
+        <div>
+            <h3 class="font-semibold text-lg mb-2">Branching Choices</h3>
+            <div class="ml-4">
+                <p><strong>From Outcome A:</strong></p>
+                <p class="ml-4"><strong>Choice:</strong> <span id="display-choiceA1">Loading...</span></p>
+                <p class="ml-4"><strong>Outcome A1a:</strong> <span id="display-outcomeA1a">Loading...</span></p>
+                <p class="ml-4"><strong>Outcome A1b:</strong> <span id="display-outcomeA1b">Loading...</span></p>
+                
+                <p class="mt-2"><strong>From Outcome B:</strong></p>
+                <p class="ml-4"><strong>Choice:</strong> <span id="display-choiceB1">Loading...</span></p>
+                <p class="ml-4"><strong>Outcome B1a:</strong> <span id="display-outcomeB1a">Loading...</span></p>
+                <p class="ml-4"><strong>Outcome B1b:</strong> <span id="display-outcomeB1b">Loading...</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Refinement Interface -->
+    <div class="bg-gray-50 p-4 rounded mb-6">
+        <h2 class="text-xl font-semibold mb-3">Get AI Suggestions</h2>
+        <p class="mb-3">Ask AI for suggestions to improve your choices and outcomes. Try asking about making choices more compelling, outcomes more interesting, or story flow more engaging.</p>
+        <textarea id="ai-prompt" class="w-full border rounded p-2 min-h-[100px]" 
+            placeholder="E.g., 'How can I make the consequences of my choices more impactful?' or 'How can I make my branching choices more connected to the initial outcomes?'"></textarea>
+        <button id="submit-prompt" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Get AI Suggestion</button>
+        <div id="ai-response" class="mt-4 p-4 bg-white border rounded shadow-sm hidden">
+            <h3 class="text-lg font-semibold mb-2">AI Suggestion:</h3>
+            <p id="response-content">Your AI suggestion will appear here.</p>
+        </div>
+    </div>
+
+    <!-- Refinement Input Section -->
+    <div class="bg-gray-50 p-4 rounded mb-6">
+        <h2 class="text-xl font-semibold mb-3">Refine Your Choices</h2>
+        
+        <!-- Initial Choice Refinement -->
+        <div class="mb-6">
+            <h3 class="font-semibold text-lg mb-4">Initial Choice Refinement</h3>
+            <div class="space-y-4">
+                <div>
+                    <label class="block font-medium mb-2">Choice</label>
+                    <textarea id="refined-choice1" class="w-full border rounded p-2 min-h-[100px]"></textarea>
+                </div>
+                <div>
+                    <label class="block font-medium mb-2">Outcome A</label>
+                    <textarea id="refined-outcomeA" class="w-full border rounded p-2 min-h-[100px]"></textarea>
+                </div>
+                <div>
+                    <label class="block font-medium mb-2">Outcome B</label>
+                    <textarea id="refined-outcomeB" class="w-full border rounded p-2 min-h-[100px]"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Branching Choices Refinement -->
+        <div>
+            <h3 class="font-semibold text-lg mb-4">Branching Choices Refinement</h3>
+            <div class="space-y-6">
+                <!-- From Outcome A -->
+                <div>
+                    <h4 class="font-medium mb-3">From Outcome A</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block font-medium mb-2">Choice</label>
+                            <textarea id="refined-choiceA1" class="w-full border rounded p-2 min-h-[100px]"></textarea>
+                        </div>
+                        <div>
+                            <label class="block font-medium mb-2">Outcome A1a</label>
+                            <textarea id="refined-outcomeA1a" class="w-full border rounded p-2 min-h-[100px]"></textarea>
+                        </div>
+                        <div>
+                            <label class="block font-medium mb-2">Outcome A1b</label>
+                            <textarea id="refined-outcomeA1b" class="w-full border rounded p-2 min-h-[100px]"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- From Outcome B -->
+                <div>
+                    <h4 class="font-medium mb-3">From Outcome B</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block font-medium mb-2">Choice</label>
+                            <textarea id="refined-choiceB1" class="w-full border rounded p-2 min-h-[100px]"></textarea>
+                        </div>
+                        <div>
+                            <label class="block font-medium mb-2">Outcome B1a</label>
+                            <textarea id="refined-outcomeB1a" class="w-full border rounded p-2 min-h-[100px]"></textarea>
+                        </div>
+                        <div>
+                            <label class="block font-medium mb-2">Outcome B1b</label>
+                            <textarea id="refined-outcomeB1b" class="w-full border rounded p-2 min-h-[100px]"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="mt-6 space-x-4">
+        <a href="activity1-choices-nested.html" class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 inline-block">Back to Branching</a>
+        <a href="activity1-reflection-comparison.html" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 inline-block">Next Step: Reflection</a>
+    </div>
+</div>                        
+            </main>
+        </div>
+    </div>
+    <script>
+// Load all saved choices from localStorage
+function loadInputs() {
+    // Initial choices display
+    const initialChoices = ['choice1', 'outcomeA', 'outcomeB'];
+    initialChoices.forEach(id => {
+        const savedValue = localStorage.getItem(id);
+        if (savedValue) {
+            document.getElementById(`display-${id}`).textContent = savedValue;
+            // Also populate refinement fields if they exist
+            const refinementField = document.getElementById(`refined-${id}`);
+            if (refinementField && !refinementField.value) {
+                refinementField.value = savedValue;
+            }
+        }
+    });
+
+    // Branching choices display
+    const branchingChoices = [
+        'choiceA1', 'outcomeA1a', 'outcomeA1b',
+        'choiceB1', 'outcomeB1a', 'outcomeB1b'
+    ];
+    branchingChoices.forEach(id => {
+        const savedValue = localStorage.getItem(id);
+        if (savedValue) {
+            document.getElementById(`display-${id}`).textContent = savedValue;
+            // Also populate refinement fields if they exist
+            const refinementField = document.getElementById(`refined-${id}`);
+            if (refinementField && !refinementField.value) {
+                refinementField.value = savedValue;
+            }
+        }
+    });
+
+    // Load any previously saved refinements
+    const refinedChoices = [
+        'refined-choice1', 'refined-outcomeA', 'refined-outcomeB',
+        'refined-choiceA1', 'refined-outcomeA1a', 'refined-outcomeA1b',
+        'refined-choiceB1', 'refined-outcomeB1a', 'refined-outcomeB1b'
+    ];
+    refinedChoices.forEach(id => {
+        const savedValue = localStorage.getItem(id);
+        if (savedValue) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.value = savedValue;
+            }
+        }
+    });
+}
+
+// Save refined choices to localStorage
+function saveRefinements() {
+    const refinedChoices = [
+        'refined-choice1', 'refined-outcomeA', 'refined-outcomeB',
+        'refined-choiceA1', 'refined-outcomeA1a', 'refined-outcomeA1b',
+        'refined-choiceB1', 'refined-outcomeB1a', 'refined-outcomeB1b'
+    ];
+    
+    refinedChoices.forEach(id => {
+        const element = document.getElementById(id);
+        if (element && element.value) {
+            localStorage.setItem(id, element.value);
+        }
+    });
+}
+
+// Handle AI suggestions
+document.getElementById('submit-prompt').addEventListener('click', () => {
+    const prompt = document.getElementById('ai-prompt').value;
+    if (prompt) {
+        const response = document.getElementById('ai-response');
+        const content = document.getElementById('response-content');
+        response.classList.remove('hidden');
+        content.textContent = `Based on your prompt "${prompt}", here's a suggestion to improve your story choices...`; // Replace with actual AI integration
+    } else {
+        alert('Please enter a prompt for the AI.');
+    }
+});
+
+// Save refinements when navigating to next page
+document.querySelector('a[href="activity1-reflection-comparison.html"]').addEventListener('click', (e) => {
+    e.preventDefault();
+    saveRefinements();
+    window.location.href = e.target.href;
+});
+
+// Initialize on page load
+window.addEventListener('DOMContentLoaded', () => {
+    loadInputs();
+    initializeProgress();
+    const currentStep = 5;
+    updateProgress(currentStep);
+    updateProgressBar();
+});
+
+// Optional: Auto-save refinements periodically
+let autoSaveTimeout;
+const refinementInputs = document.querySelectorAll('textarea[id^="refined-"]');
+refinementInputs.forEach(input => {
+    input.addEventListener('input', () => {
+        clearTimeout(autoSaveTimeout);
+        autoSaveTimeout = setTimeout(saveRefinements, 1000); // Save 1 second after last input
+    });
+});
+</script>
+</body>
+</html>

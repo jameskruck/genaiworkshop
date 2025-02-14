@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 1: Reflection Comparison</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="header-nav shadow-sm no-print">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <h1 class="text-xl font-bold">Reflection Comparison</h1>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Content Wrapper -->
+    <div class="flex flex-grow min-h-0">
+        <!-- Main Content -->
+        <div class="flex flex-col flex-grow">
+            <main class="main-content flex-grow">
+<!-- Progress Bar -->
+<div class="bg-white rounded-lg shadow-sm p-6 mb-4" role="navigation" aria-label="Progress">
+    <div class="flex items-center justify-between max-w-5xl mx-auto">
+        <div class="w-20" data-step="1">
+            <a href="activity1.html" class="flex flex-col items-center w-20 group hover:opacity-75">
+                <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold mb-2">1</div>
+                <span class="text-blue-600 font-semibold text-center text-sm">Story Setup</span>
+            </a>
+        </div>
+        <div class="h-1 w-16 bg-blue-600" data-line="1"></div>
+        <div class="w-20" data-step="2">
+            <a href="activity1-refine.html" class="flex flex-col items-center w-20 group hover:opacity-75">
+                <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold mb-2">2</div>
+                <span class="text-blue-600 font-semibold text-center text-sm">Refinement</span>
+            </a>
+        </div>
+        <div class="h-1 w-16 bg-blue-600" data-line="2"></div>
+        <div class="w-20" data-step="3">
+            <a href="activity1-choices.html" class="flex flex-col items-center w-20 group hover:opacity-75">
+                <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold mb-2">3</div>
+                <span class="text-blue-600 font-semibold text-center text-sm">Choices</span>
+            </a>
+        </div>
+        <div class="h-1 w-16 bg-blue-600" data-line="3"></div>
+        <div class="w-20" data-step="4">
+            <a href="activity1-choices-nested.html" class="flex flex-col items-center w-20 group hover:opacity-75">
+                <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold mb-2">4</div>
+                <span class="text-blue-600 font-semibold text-center text-sm">Branching</span>
+            </a>
+        </div>
+        <div class="h-1 w-16 bg-blue-600" data-line="4"></div>
+        <div class="w-20" data-step="5">
+            <a href="activity1-choices-nested.html" class="flex flex-col items-center w-20 group hover:opacity-75">
+                <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold mb-2">5</div>
+                <span class="text-blue-600 font-semibold text-center text-sm">Refinement</span>
+            </a>
+        </div>
+        <div class="h-1 w-16 bg-blue-600" data-line="5"></div>
+        <div class="w-20" data-step="6">
+    <div class="flex flex-col items-center w-20 relative" aria-current="step">
+        <!-- Added ring for visual indication -->
+        <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold mb-2 ring-2 ring-blue-600 ring-offset-2">6</div>
+        <span class="text-blue-600 font-semibold text-center text-sm">Reflection</span>
+        <!-- Added visually hidden text for screen readers -->
+        <span class="sr-only">(Current Step)</span>
+    </div>
+</div>
+    </div>
+</div>
+
+                <!-- Main Content -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h1 class="text-2xl font-bold mb-4">Step 6: Reflection and Comparison</h1>
+
+                    <!-- Comparison Table -->
+                    <div class="bg-gray-50 p-4 rounded mb-6">
+                        <h2 class="text-xl font-semibold mb-3">Original vs. Refined Story Elements</h2>
+                        <table class="w-full table-auto border-collapse border border-gray-300">
+                            <thead>
+                                <tr>
+                                    <th class="border border-gray-300 px-4 py-2">Original</th>
+                                    <th class="border border-gray-300 px-4 py-2">Refined</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2" id="original-choice1">Loading...</td>
+                                    <td class="border border-gray-300 px-4 py-2" id="refined-choice1">Loading...</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2" id="original-outcomeA">Loading...</td>
+                                    <td class="border border-gray-300 px-4 py-2" id="refined-outcomeA">Loading...</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2" id="original-outcomeB">Loading...</td>
+                                    <td class="border border-gray-300 px-4 py-2" id="refined-outcomeB">Loading...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Reflection Section -->
+                    <div class="bg-gray-50 p-4 rounded mb-6">
+                        <h2 class="text-xl font-semibold mb-3">Reflection</h2>
+                        <p class="mb-3">Answer the following questions to reflect on your experience:</p>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block font-medium mb-2">What changes surprised you the most?</label>
+                                <textarea id="reflection-q1" class="w-full border rounded p-2 min-h-[100px]"></textarea>
+                            </div>
+                            <div>
+                                <label class="block font-medium mb-2">How did AI improve your story?</label>
+                                <textarea id="reflection-q2" class="w-full border rounded p-2 min-h-[100px]"></textarea>
+                            </div>
+                            <div>
+                                <label class="block font-medium mb-2">How might this process apply to your teaching or learning?</label>
+                                <textarea id="reflection-q3" class="w-full border rounded p-2 min-h-[100px]"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="download-reflection" class="mt-6 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                        Download My Reflection
+                    </button>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Load saved inputs and populate the comparison table
+        function loadInputs() {
+            const fields = ['choice1', 'outcomeA', 'outcomeB', 'refined-choice1', 'refined-outcomeA', 'refined-outcomeB'];
+            fields.forEach(id => {
+                const savedValue = localStorage.getItem(id);
+                if (savedValue) {
+                    document.getElementById(id.includes('refined') ? id : `original-${id}`).textContent = savedValue;
+                }
+            });
+        }
+
+        window.onload = loadInputs;
+
+        // Download reflection as a text file
+        document.getElementById('download-reflection').addEventListener('click', () => {
+            const reflections = [
+                document.getElementById('reflection-q1').value,
+                document.getElementById('reflection-q2').value,
+                document.getElementById('reflection-q3').value
+            ];
+            const content = `Reflection:\n\n${reflections.join('\n\n')}`;
+            const blob = new Blob([content], { type: 'text/plain' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'reflection.txt';
+            link.click();
+        });
+    </script>
+            <script>
+// Progress management
+function initializeProgress() {
+    if (!localStorage.getItem('maxStepReached')) {
+        localStorage.setItem('maxStepReached', '1');
+    }
+}
+
+function updateProgress(currentStep) {
+    const maxStepReached = parseInt(localStorage.getItem('maxStepReached')) || 1;
+    if (currentStep > maxStepReached) {
+        localStorage.setItem('maxStepReached', currentStep.toString());
+    }
+}
+
+function updateProgressBar() {
+    const maxStepReached = parseInt(localStorage.getItem('maxStepReached')) || 1;
+const steps = {
+    1: { name: 'Story Setup', slug: '' },
+    2: { name: 'Refinement', slug: 'refine' },
+    3: { name: 'Choices', slug: 'choices' },
+    4: { name: 'Branching', slug: 'choices-nested' },  // Updated to match correct file
+    5: { name: 'Refinement', slug: 'reflection' },     // Updated to match correct file
+    6: { name: 'Reflection', slug: 'reflection-comparison' }
+};
+
+// In the updateProgressBar function, update the active step styling:
+if (i === currentStep) {
+    stepElement.innerHTML = `
+        <div class="flex flex-col items-center w-20 relative" aria-current="step">
+            <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold mb-2 ring-2 ring-blue-600 ring-offset-2">${i}</div>
+            <span class="text-blue-600 font-semibold text-center text-sm">${steps[i].name}</span>
+            <span class="sr-only">(Current Step)</span>
+        </div>
+    `;
+} else if (i <= maxStepReached) {
+    stepElement.innerHTML = `
+        <a href="activity1${steps[i].slug ? '-' + steps[i].slug : ''}.html" 
+           class="flex flex-col items-center w-20 group hover:opacity-75">
+            <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold mb-2">${i}</div>
+            <span class="text-blue-600 font-semibold text-center text-sm">${steps[i].name}</span>
+        </a>
+    `;
+}
+        
+        // Update connecting lines
+        const lineAfter = document.querySelector(`[data-line="${i}"]`);
+        if (lineAfter && i < 6) {
+            lineAfter.className = `h-1 w-16 ${i < maxStepReached ? 'bg-blue-600' : 'bg-gray-300'}`;
+        }
+    }
+}
+
+// Initialize on page load
+window.addEventListener('DOMContentLoaded', () => {
+    initializeProgress();
+    const currentStep = 6; // Set this based on current page
+    updateProgress(currentStep);
+    updateProgressBar();
+});
+</script>
+</body>
+</html>

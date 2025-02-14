@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activity 1: Create Branching Choices</title>
+    <title>Activity 1: Nested Branching Choices</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
@@ -22,7 +22,7 @@
         </nav>
     </header>
 
-   <!-- Content Wrapper -->
+    <!-- Content Wrapper -->
     <div class="flex flex-grow min-h-0">
         <!-- Main Content -->
         <div class="flex flex-col flex-grow">
@@ -45,17 +45,17 @@
         </div>
         <div class="h-1 w-16 bg-blue-600" data-line="2"></div>
         <div class="w-20" data-step="3">
-            <a href="activity1-choices.html" class="flex flex-col items-center w-20 group hover:opacity-75" aria-current="page">
+            <a href="activity1-choices.html" class="flex flex-col items-center w-20 group hover:opacity-75">
                 <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold mb-2">3</div>
                 <span class="text-blue-600 font-semibold text-center text-sm">Choices</span>
             </a>
         </div>
-        <div class="h-1 w-16 bg-gray-300" data-line="3"></div>
+        <div class="h-1 w-16 bg-blue-600" data-line="3"></div>
         <div class="w-20" data-step="4">
-            <div class="flex flex-col items-center w-20">
-                <div class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center text-white font-semibold mb-2">4</div>
-                <span class="text-gray-500 text-center text-sm">Branching</span>
-            </div>
+            <a href="activity1-choices-nested.html" class="flex flex-col items-center w-20 group hover:opacity-75" aria-current="page">
+                <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold mb-2">4</div>
+                <span class="text-blue-600 font-semibold text-center text-sm">Branching</span>
+            </a>
         </div>
         <div class="h-1 w-16 bg-gray-300" data-line="4"></div>
         <div class="w-20" data-step="5">
@@ -76,63 +76,82 @@
 
  
                 <div class="bg-white rounded-lg shadow-sm p-6">
-                    <h1 class="text-2xl font-bold mb-4">Step 3: Create Your Story's First Branching Choices</h1>
+                    <h1 class="text-2xl font-bold mb-4">Step 4: Continue Your Story's Branching Paths</h1>
 
-                    <!-- Display Refined Story Setup -->
+                    <!-- Display Previous Outcomes -->
                     <div class="bg-gray-50 p-4 rounded mb-4">
-                        <h2 class="text-xl font-semibold mb-3">Your Refined Story Setup</h2>
-                        <p><strong>Theme:</strong> <span id="display-theme">Loading...</span></p>
-                        <p><strong>Main Character:</strong> <span id="display-main-character">Loading...</span></p>
-                        <p><strong>Setting:</strong> <span id="display-setting">Loading...</span></p>
+                        <h2 class="text-xl font-semibold mb-3">Outcomes from Previous Step</h2>
+                        <p><strong>Outcome A:</strong> <span id="display-outcomeA">Loading...</span></p>
+                        <p><strong>Outcome B:</strong> <span id="display-outcomeB">Loading...</span></p>
                     </div>
 
-                    <!-- Input Fields for Choices and Outcomes Q1 -->
-                    <div class="bg-gray-50 p-4 rounded mb-4">
-                        <h2 class="text-xl font-semibold mb-3">Branching Choices</h2>
-                        <p class="mb-3">Create the first choice and its two possible outcomes:</p>
-                        <div class="space-y-4">
-                            <div>
-                                <label class="block font-medium mb-2">Choice 1</label>
-                                <input type="text" id="choice1" class="w-full border rounded p-2" placeholder="Describe the first choice">
-                            </div>
-                            <div>
-                                <label class="block font-medium mb-2">Outcome A</label>
-                                <textarea id="outcomeA" class="w-full border rounded p-2 min-h-[100px]" placeholder="Describe what happens in Outcome A"></textarea>
-                            </div>
-                            <div>
-                                <label class="block font-medium mb-2">Outcome B</label>
-                                <textarea id="outcomeB" class="w-full border rounded p-2 min-h-[100px]" placeholder="Describe what happens in Outcome B"></textarea>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Input Fields for Nested Choices -->
+<div class="bg-gray-50 p-4 rounded mb-6">
+    <h2 class="text-xl font-semibold mb-3">Branching from Outcome A: <span id="dynamic-outcomeA">Loading...</span></h2>
+    <div class="space-y-4">
+        <div>
+            <label class="block font-medium mb-2">Choice A1</label>
+            <input type="text" id="choiceA1" class="w-full border rounded p-2" placeholder="Describe the next decision based on Outcome A">
+        </div>
+        <div>
+            <label class="block font-medium mb-2">Outcome A1a</label>
+            <textarea id="outcomeA1a" class="w-full border rounded p-2 min-h-[100px]" placeholder="Describe what happens in Outcome A1a"></textarea>
+        </div>
+        <div>
+            <label class="block font-medium mb-2">Outcome A1b</label>
+            <textarea id="outcomeA1b" class="w-full border rounded p-2 min-h-[100px]" placeholder="Describe what happens in Outcome A1b"></textarea>
+        </div>
+    </div>
+
+    <h2 class="text-xl font-semibold mb-6">Branching from Outcome B: <span id="dynamic-outcomeB">Loading...</span></h2>
+    <div class="space-y-4">
+        <div>
+            <label class="block font-medium mb-2">Choice B1</label>
+            <input type="text" id="choiceB1" class="w-full border rounded p-2" placeholder="Describe the next decision based on Outcome B">
+        </div>
+        <div>
+            <label class="block font-medium mb-2">Outcome B1a</label>
+            <textarea id="outcomeB1a" class="w-full border rounded p-2 min-h-[100px]" placeholder="Describe what happens in Outcome B1a"></textarea>
+        </div>
+        <div>
+            <label class="block font-medium mb-2">Outcome B1b</label>
+            <textarea id="outcomeB1b" class="w-full border rounded p-2 min-h-[100px]" placeholder="Describe what happens in Outcome B1b"></textarea>
+        </div>
+
                 <div class="mt-6 space-x-4">
-    <a href="activity1-refine.html" class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 inline-block">Back to Refinement</a>
-    <a href="activity1-choices-nested.html" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 inline-block">Next Step: Continue the Story</a>
+        <a href="activity1-choices.html" class="bg-gray-600 text-white px-6 py-2 rounded hover:bg-gray-700 inline-block">Back to Previous Choices</a>
+        <a href="activity1-reflection.html" class="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 inline-block">Next Step: Refinement</a>
+    </div>
 </div>
-</div>
-</main>
+
+            </main>
         </div>
     </div>
 
     <script>
-        // Load saved refined inputs from localStorage
-        function loadInputs() {
-            const fields = ['theme', 'main-character', 'setting'];
-            fields.forEach(id => {
-                const savedValue = localStorage.getItem(id);
-                if (savedValue) {
-                    document.getElementById(`display-${id}`).textContent = savedValue;
-                }
-            });
+       // Load saved outcomes from localStorage and dynamically update labels
+function loadInputs() {
+    const fields = ['outcomeA', 'outcomeB'];
+    fields.forEach(id => {
+        const savedValue = localStorage.getItem(id);
+        if (savedValue) {
+            document.getElementById(`display-${id}`).textContent = savedValue;
+            document.getElementById(`dynamic-${id}`).textContent = savedValue; // For dynamic labels
         }
+    });
+}
 
-        window.onload = loadInputs;
+window.onload = loadInputs;
 
-        // Save choices and outcomes to localStorage
-        document.querySelector('a[href="activity1-choices-nested.html"]').addEventListener('click', () => {
-            localStorage.setItem('choice1', document.getElementById('choice1').value);
-            localStorage.setItem('outcomeA', document.getElementById('outcomeA').value);
-            localStorage.setItem('outcomeB', document.getElementById('outcomeB').value);
+
+        // Save nested choices and outcomes to localStorage
+        document.querySelector('a[href="activity1-reflection.html"]').addEventListener('click', () => {
+            localStorage.setItem('choiceA1', document.getElementById('choiceA1').value);
+            localStorage.setItem('outcomeA1a', document.getElementById('outcomeA1a').value);
+            localStorage.setItem('outcomeA1b', document.getElementById('outcomeA1b').value);
+            localStorage.setItem('choiceB1', document.getElementById('choiceB1').value);
+            localStorage.setItem('outcomeB1a', document.getElementById('outcomeB1a').value);
+            localStorage.setItem('outcomeB1b', document.getElementById('outcomeB1b').value);
         });
     </script>
         <script>
@@ -188,27 +207,10 @@ const steps = {
 // Initialize on page load
 window.addEventListener('DOMContentLoaded', () => {
     initializeProgress();
-    const currentStep = 3; // Set this based on current page
+    const currentStep = 4; // Set this based on current page
     updateProgress(currentStep);
     updateProgressBar();
 });
-</script>
-<script>
-    // Load saved refined inputs from localStorage
-    function loadRefinedInputs() {
-        const refinedFields = ['theme', 'main-character', 'setting'];
-        refinedFields.forEach(id => {
-            const savedRefinedValue = localStorage.getItem(`refined-${id}`);
-            if (savedRefinedValue) {
-                document.getElementById(`display-${id}`).textContent = savedRefinedValue;
-            }
-        });
-    }
-
-    window.onload = function() {
-        loadInputs(); // Load initial inputs
-        loadRefinedInputs(); // Load refined inputs
-    };
 </script>
 </body>
 </html>
